@@ -150,7 +150,7 @@ Com isso podemos criar uma “variável de decisão”, vamos chamá-la de d. A 
     <b> d = F(M) = (x + 1)*dy – dx*(y + 1/2) + c*dx </b>
 </p>
 
-Com esta função sabemos que um ponto que esteja na reta terá valor 0, se o valor for positivo sabemos que o próximo ponto que deve ser acendido será o ponto abaixo da reta, em outras palavras, o ponto (X + 1, Y). Caso o valor seja negativo podemos afirmar que o próximo ponto que deve ser acendido será o ponto acima da reta, ou seja, o ponto (X + 1, Y + 1).
+Com esta função sabemos que quando seu valor for 0 o ponto estará na reta, se o valor for positivo sabemos que o próximo ponto que deve ser acendido será o ponto abaixo da reta, em outras palavras, o ponto (X + 1, Y). Caso o valor seja negativo podemos afirmar que o próximo ponto que deve ser acendido será o ponto acima da reta, ou seja, o ponto (X + 1, Y + 1).
 
 Com todos esses cálculos estamos quase prontos para começar a desenhar linha com Bresenham, falta apenas descobrirmos o d inicial.
 
