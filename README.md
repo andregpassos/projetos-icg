@@ -45,7 +45,7 @@ Para desenhar um pixel na tela criaremos uma funçâo chamada putPixel, na image
 	<br>
 </p>
 
-Ele recebe como parâmetros a posição x, a posição y e um vetor que contém a cor.  Como cada pixel ocupa 4 bytes é necessário multiplicar a posição x por 4, além disso, somamos a posição x com o valor de i para percorremos todos os bytes de cor e atribuir-lhes seus valores RGBA.
+Ela recebe como parâmetros a posição x, a posição y e um vetor que contém a cor.  Como cada pixel ocupa 4 bytes é necessário multiplicar a posição x por 4, além disso, somamos a posição x com o valor de i para percorremos todos os bytes de cor e atribuir-lhes seus valores RGBA.
 
 <p align="center">
 	<br>
@@ -287,7 +287,7 @@ Como podemos ver agora é possível desenhar linhas em todos os quadrantes.
 
 ### Linear Interpolation
 
-Agora que já temos o algoritmo de Brasenham pronto temos que fazer um algoritmo que faca a interpole as cores dos vértices da linha. Para isso criaremos duas novas funções.
+Agora que já temos o algoritmo de Brasenham pronto temos que fazer um algoritmo que interpole as cores entre os vértices da linha. Para isso criaremos duas novas funções.
 
 A primeira será uma que retorna o tamanho da linha, vamos chama-la de distancia. O cabeçalho dessa função é esse:
 
@@ -316,7 +316,7 @@ A segunda função é a colorInterpolation, mas antes de mostrar o cabeçalho de
 	<br>
 </p>
 
-Foi acrescentada uma nova variável chamada corF, essa variável representa a cor que terá o segundo vértice da reta. Também ocorreram as seguintas mudanças dentro do corpo da função drawLine:
+Foi acrescentada uma nova variável chamada corF, essa variável representa a cor do segundo vértice da reta. Também ocorreram as seguintas mudanças dentro do corpo da função drawLine:
 
 <p align="center">
 	<br>
@@ -337,7 +337,7 @@ A função colorInterpolation é essa:
 </p>
 
 
-Essa função é dividida em duas partes. A primeira parte é o decremento de cor, ela verifica qual é a cor inicial por meio da variável RGBAi e atribui a variável RGBA o valor da cor inicial multiplicado por p. A segunda parte é o incremento de cor, ela verifica qual é a cor final por meio da variável RGBAf e atribui a variável RGBA o valor da cor final multiplicado por (1-p).
+Essa função é dividida em duas partes. A primeira parte é o decremento de cor, ela verifica qual é a cor inicial por meio do vetor RGBAi e atribui ao vetor RGBA o valor da cor inicial multiplicado por p. A segunda parte é o incremento de cor, ela verifica qual é a cor final por meio do vetor RGBAf e atribui ao vetor RGBA o valor da cor final multiplicado por (1-p).
 A função colorInterpolation deve ser chamada toda vez antes da função putPixel.
 
 O resultado é o seguinte:
@@ -353,7 +353,7 @@ O resultado é o seguinte:
 
 ### Drawing Triangles
 
-Nossa próxima tarefa é desenhar um triângulo, para fazer isso basta criar uma função chamada drawTriangle cujo cabeçalho: 
+Nossa próxima tarefa é desenhar um triângulo, para fazer isso basta criar uma função chamada drawTriangle cujo cabeçalho é: 
 
 <p align="center">
 	<br>
@@ -377,7 +377,7 @@ Os resultados são os seguintes:
 
 ### Conclusions
 
-Chegamos a conclusão que o algoritmo de Bresenham é realmente muito efetivo para desenhar linhas, como um todo achamos que os resultados foram satisfatórios. O maior desafio encontrado durante o desenvolvimento do projeto foi na função de interpolação de cores, encontramos um bug que fazia com que a cor inicial ficasse transparente. Esse problema foi resolvido após adicionar os vetores RGBAi e RGBAf para verificar se a cor que estava sendo alterada era a cor inicial ou final.
+Chegamos a conclusão que o algoritmo de Bresenham é realmente muito efetivo para desenhar linhas, como um todo achamos que os resultados foram satisfatórios. O maior desafio encontrado durante o desenvolvimento do projeto foi na função de interpolação de cores, encontramos um bug que fazia com que a cor inicial ficasse transparente. Esse problema foi resolvido após adicionar os vetores RGBAi e RGBAf para verificar se a cor que estava sendo alterada era a cor inicial ou final. 
 
 ---
 
