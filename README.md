@@ -45,7 +45,7 @@ Para desenhar um pixel na tela criaremos uma funçâo chamada putPixel, na image
 	<br>
 </p>
 
-Ela recebe como parâmetros a posição x, a posição y e um vetor que contém a cor.  Como cada pixel ocupa 4 bytes é necessário multiplicar a posição x por 4, além disso, somamos a posição x com o valor de uma posição, que vai de 0 a 4, para percorremos todos os bytes de cor e atribuir-lhes seus valores RGBA.
+Ela recebe como parâmetros a posição x, a posição y e um vetor que contém a cor.  Como cada pixel ocupa 4 bytes é necessário multiplicar a posição x por 4, além disso, somamos a posição x com o valor de uma posição, que vai de 0 a 3, para percorremos todos os bytes de cor e atribuir-lhes seus valores RGBA.
 
 <p align="center">
 	<br>
