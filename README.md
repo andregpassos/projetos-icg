@@ -364,7 +364,7 @@ Nossa próxima tarefa é desenhar um triângulo, para fazer isso basta criar uma
 
 Essa função recebe os 3 vertices do triangulo e as cores de cada vértice. Para conseguir desenhar um triângulo é bem simples, basta chamar a função drawLine 3 vezes com um vértice ligando ao outro.
 
-Os resultados são os seguintes:
+O resultado é o seguinte:
 
 <p align="center">
 	<br>
